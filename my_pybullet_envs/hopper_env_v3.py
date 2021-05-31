@@ -140,7 +140,8 @@ class HopperURDFEnvV3(gym.Env):
             # something is wrong with this API
             # seems that you must add cube.obj to pybullet_data folder for this to work
             # it cannot search relative path in the repo
-            _ = self._p.loadSoftBody("cube_fat.obj", basePosition=[7, 0, -5.05], scale=20, mass=20.,
+            _ = self._p.loadSoftBody(os.path.join(currentdir,  "assets/cube_fat.obj"),
+                                     basePosition=[7, 0, -5.05], scale=20, mass=20.,
                                      useNeoHookean=1,
                                      useBendingSprings=1, useMassSpring=1, springElasticStiffness=1500,
                                      springDampingStiffness=50, springDampingAllDirections=1,
