@@ -1,0 +1,7 @@
+numpy
+scipy
+gym==0.14.0
+matplotlib
+pybullet
+tqdm
+joblib
